@@ -1,104 +1,174 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(41, 33, 189, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  color: white;
-  font-family: "Barlow Semi Condensed", sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(41, 33, 189, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
+
 .container {
-  width: 30rem;
-  margin: 5rem auto;
-  position: relative;
+    width: 30rem;
+    margin: 5rem auto;
+    position: relative;
+
 }
-.score {
-  display: flex;
-  /* padding: 2rem; */
-  height: 8rem;
-  width: 30rem;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin-bottom: 5rem;
-}
-.score h1 {
-  font-size: 1.6rem;
-  margin: 1rem 1.2rem;
-}
-h6 {
-  color: black;
-  font-weight: 900;
-}
-.point {
-  margin: 1rem 1.6rem;
-  background-color: white;
-  color: black;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  font-size: 2rem;
-  text-align: center;
-}
-.point span {
-font-size: 2.5rem;
-font-weight: 900;
-}
+
 .images {
-  background-image: url(./images/bg-triangle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-  height: 20rem;
-  position: relative;
+    height: 20rem;
+    background-image: url(./images/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    position: relative;
+    z-index: 0;
+
+
 }
+
 .images img {
-  position: absolute;
-  cursor: pointer;
+    position: absolute;
+    cursor: pointer;
+
 }
-.paper {
-  left: 5rem;
-  top: 0;
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 1.5rem 1.8rem;
-  background-color: white;
-  outline: 15px solid hsl(230, 89%, 62%);
-}
+
 .scissors {
-  left: 20rem;
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 1.5rem 1.8rem;
-  background-color: white;
-  outline: 15px solid hsl(39, 89%, 49%);
+    left: 19rem;
+    background-color: white;
+    padding: 1.2rem 1.6rem;
+    border-radius: 50%;
+    outline: 15px solid hsl(39, 89%, 49%)
 }
+
 .rock {
-  left: 12rem;
-  top: 12rem;
-  border: 2px solid white;
-  border-radius: 50%;
-  padding: 1.5rem 1.8rem;
-  background-color: white;
-  outline: 15px solid hsl(349, 71%, 52%);
+    left: 12.5rem;
+    top: 12rem;
+    background-color: white;
+    padding: 1.5rem 1.6rem;
+    border-radius: 50%;
+    outline: 15px solid hsl(349, 71%, 52%)
 }
+
+.paper {
+    left: 6rem;
+    top: 0;
+    background-color: white;
+    padding: 1.2rem 1.8rem;
+    border-radius: 50%;
+    outline: 15px solid hsl(230, 89%, 62%)
+}
+
 .rules {
-  position: fixed;
-  bottom: 3rem;
-  right: 3rem;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
 }
+
 .rules button {
-  padding: 0.5rem 0.5rem;
-  border-radius: 10px;
-  background-color: rgb(2, 0, 36);
-  border: 2px solid rgba(255, 255, 255, 0.452);
-  color: rgba(255, 255, 255, 0.753);
-  cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: rgb(2, 0, 36);
+    border: 2px solid rgba(255, 255, 255, 0.452);
+    color: rgba(255, 255, 255, 0.753);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.score {
+    border: 2px solid rgba(255, 255, 255, 0.651);
+    height: 8rem;
+    width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+
+}
+
+.score h1 {
+    font-size: 1.6rem;
+
+
+}
+
+.point {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.point span {
+    font-size: 2.5rem;
+    font-weight: 900;
+
+}
+
+.secret {
+    width: 22rem;
+    margin: -6rem auto;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.904);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    z-index: 2000000;
+    font-size: 0.8rem;
+    display: none;
+    position: absolute;
+    left: 3.5rem;
+}
+
+.top {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.choosen {
+    height: 20rem;
+    position: relative;
+    padding: 0 4rem;
+    display: none;
+}
+
+.names {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.space {
+    background-color: rgb(36, 36, 85);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    color: red;
+    cursor: pointer;
 }
